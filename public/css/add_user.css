@@ -1,0 +1,99 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/* Enhanced Styles */
+.signin-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    animation: fadeInUp 0.5s ease;
+}
+
+.signin-title {
+    width: 100px;
+    padding-left: 8px;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    margin-right: 22px;
+    margin-bottom: 20px;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+}
+
+/* Name input field */
+#name{
+    width: 280px;
+    height: 30px;
+    border: solid;
+    border-color: #E8A452;
+    border-width: 1px;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+/* Email input field */
+#email{
+    width: 280px;
+    height: 30px;
+    border: solid;
+    border-color: #E8A452;
+    border-width: 1px;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+/* Password input field */
+#password{
+    width: 280px;
+    height: 30px;
+    border: solid;
+    border-color: #E8A452;
+    border-width: 1px;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+/* Login button */
+.login-button{
+    background-color: #E8A452;
+    width: 290px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    color: #FFFFFF;
+}
+
+
+
+/* Rest of your existing styles... */
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
