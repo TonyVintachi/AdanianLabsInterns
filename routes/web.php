@@ -19,5 +19,13 @@ use Illuminate\Support\Facades\Route;
 });
 */
 
-Route::get('/', [CustomAuthController::class, 'login']);
-Route::get('/add_user', [CustomAuthController::class, 'registration']);
+Route::get('/', [CustomAuthController::class, 'login'])->middleware('alreadyLoggedIn');
+Route::get('/register', [CustomAuthController::class, 'register']);
+
+// Post user data to database
+Route::post('/registration', [CustomAuthController::class, 'registration'])->name('registration');
+
+// Log user in
+Route::post('/login-user', [CustomAuthController::class, 'loginUser'])->name('login-user');
+
+Route::get('/home', [CustomAuthController::class, 'home'])->middleware('isLoggedIn');

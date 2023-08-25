@@ -40,7 +40,7 @@ body {
 }
 
 /* Name input field */
-#name{
+#first_name{
     width: 280px;
     height: 30px;
     border: solid;
@@ -49,6 +49,18 @@ body {
     border-radius: 3px;
     padding-left: 8px;
 }
+
+/* Last Name input field */
+#last_name{
+    width: 280px;
+    height: 30px;
+    border: solid;
+    border-color: #E8A452;
+    border-width: 1px;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
 
 /* Email input field */
 #email{
