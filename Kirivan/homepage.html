@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        /* Existing and Adjusted Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e2e4;
+        }
+
+        /* Top Bar styles */
+        .top-bar {
+            background-color: #e8a452;
+            color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .options-icon {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .brand-name {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: auto;
+        }
+
+        .search-box {
+            flex: 0;
+            padding: 10px 10px;
+            margin: 0 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #fff;
+            order: 2;
+        }
+
+        .notification-icon {
+            cursor: pointer;
+            order: 3;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #e8a452;
+            padding: 20px;
+            width: 240px;
+            position: fixed;
+            height: calc(100% - 50px);
+            left: 0;
+            top: 50px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            color: #ecf0f1;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 10px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #34495e;
+        }
+
+        .navbar-logo {
+            display: block;
+            margin-top: 20px;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .profile-card {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-card .profile-icon-label {
+            display: inline-block;
+            background-color: #a2b4c5;
+            padding: 15px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .profile-card .profile-icon-label:hover {
+            background-color: #bbcada;
+        }
+
+        .profile-icon-label i {
+            font-size: 3.5em;
+            cursor: pointer;
+        }
+
+        .profile-card div {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        #profile-upload {
+            display: none; 
+        }
+
+        /* Styles for Sticky Notes */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 2rem;
+            margin-left: 250px;
+        }
+
+        .sticky-note {
+            padding: 20px;
+            background-color: #e8a452;
+            color: #ecf0f1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .sticky-note h3 {
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .sticky-note:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            border-width: 0 25px 25px 0;
+            border-color: transparent #b38867 transparent transparent;
+            border-style: solid;
+            display: block;
+            width: 0;
+        }
+
+        /* Styles for Urgent Tasks */
+        .urgent-tasks {
+            padding: 2rem;
+            margin-left: 250px;
+        }
+
+        .urgent-tasks h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .urgent-tasks-bar, .urgent-task-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 1rem;
+            align-items: center;
+        }
+
+        .urgent-tasks-bar {
+            background-color: red;
+            color: #ecf0f1;
+        }
+
+        .urgent-task-row {
+            border: 1px solid red;
+            border-top: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-grid, .urgent-tasks {
+                margin-left: 0;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar with options icon, brand name, search and notification icons -->
+    <div class="top-bar">
+        <i class="fas fa-bars options-icon"></i>
+        <span class="brand-name">Kirivan</span>
+        <input type="search" placeholder="Search..." class="search-box">
+        <i class="fas fa-bell notification-icon"></i>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="profile-card">
+            <label for="profile-upload" class="profile-icon-label">
+                <i class="fas fa-user-circle"></i>
+            </label>
+            <input type="file" id="profile-upload" accept="image/png, image/jpeg">
+            <div>Username</div>
+        </div>
+        <a href="homepage.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="project.html">Projects</a>
+        <a href="task.html">Tasks</a>
+        <a href="#">Settings</a>
+       
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <header>
+            <h1>Active Projects</h1>
+        </header>
+
+        <div class="project-grid">
+            <div class="sticky-note">
+                <h3>Project A</h3>
+                <p>Due Date: 10th October 2023</p>
+            </div>
+
+            <div class="sticky-note">
+                <h3>Project B</h3>
+                <p>Due Date: 5th November 2023</p>
+            </div>
+        </div>
+
+        <!-- Urgent Tasks Section -->
+        <section class="urgent-tasks">
+            <h2>Urgent Tasks</h2>
+            <div class="urgent-tasks-bar">
+                <div class="task-name">Task Name</div>
+                <div class="task-type">Task Type</div>
+                <div class="incomplete-tasks">Incomplete Tasks</div>
+                <div class="hours-left">Hours Left</div>
+            </div>
+            <!-- Placeholder for task rows -->
+            <div class="urgent-task-row">
+                <div class="task-name">Sample Task 1</div>
+                <div class="task-type">Type A</div>
+                <div class="incomplete-tasks">2 remaining</div>
+                <div class="hours-left">5h</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

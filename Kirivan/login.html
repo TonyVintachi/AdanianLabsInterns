@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Include Martaian Mono font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8a452;
+            font-family: 'Martian Mono', monospace; /* the Martian Mono font */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            background-color: white;
+            padding: 25px 30px; 
+            border-radius: 20px;
+            box-shadow: 15px 25px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin-bottom: -8px; 
+            max-width: 100%;
+            height: auto;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 0px;
+            margin: 5px 0; 
+            border: 5px solid #ccc;
+            border-radius: 15px;
+            font-family: 'Martian Mono', monospace;
+        }
+
+        /* Style for placeholders to look more like labels when clicked */
+        ::placeholder {
+            color: #666;
+            opacity: 1;
+        }
+
+        .login-box input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 15px;
+            text-align: right;
+            text-decoration: none;
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <img src="logo.png" alt="Your Logo" class="logo">
+        <form>
+            <input type="text" id="username" name="username" required placeholder="Username">
+            <input type="password" id="password" name="password" required placeholder="Password">
+
+            <div>
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+
+            <button type="submit">Sign In</button>
+
+            <a class="forgot-password" onclick="alert('Reset link sent!');">Forgot my password</a>
+        </form>
+    </div>
+
+    <script>
+        // This is just a alert for the "Forgot my password" link.
+    
+        function forgotPassword() {
+            alert('Please contact the system administrator or follow the link sent to your email.');
+        }
+    </script>
+
+</body>
+
+</html>
