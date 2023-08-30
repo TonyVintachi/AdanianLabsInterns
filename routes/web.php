@@ -29,3 +29,11 @@ Route::post('/registration', [CustomAuthController::class, 'registration'])->nam
 Route::post('/login-user', [CustomAuthController::class, 'loginUser'])->name('login-user');
 
 Route::get('/home', [CustomAuthController::class, 'home'])->middleware('isLoggedIn');
+
+/*
+Route::get(‘blade’, function () {
+
+    return view(‘demo’);
+
+});
+*/
