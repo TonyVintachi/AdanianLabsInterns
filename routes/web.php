@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\dashboardViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,8 @@ Route::post('/registration', [CustomAuthController::class, 'registration'])->nam
 Route::post('/login-user', [CustomAuthController::class, 'loginUser'])->name('login-user');
 
 Route::get('/home', [CustomAuthController::class, 'home'])->middleware('isLoggedIn');
+
+Route::get('/dashboard', [dashboardViewController::class, 'dashboard@index'])->middleware('isLoggedIn');
 
 /*
 Route::get(‘blade’, function () {

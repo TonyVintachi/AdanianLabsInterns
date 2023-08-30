@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Hash;
 Use Session;
+use DB;
 
 class CustomAuthController extends Controller
 {
@@ -84,5 +85,13 @@ class CustomAuthController extends Controller
 
         return view("home", compact(('data')));
     }
+    
+
+    public function dashboard()
+    {
+    $projects = DB::select('select * from projects');
+    return view('dashboard',['projects'=>$projects]);
+    }
+
 
 }

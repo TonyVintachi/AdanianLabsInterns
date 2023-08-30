@@ -186,6 +186,27 @@
         </div>
     </div>
 
+        <!-- displaying projects in database as list for testing has to be moved into the cards -->
+
+        <table border = "1">
+            <tr>
+            <td>projectID</td>
+            <td>userIdFk</td>
+            <td>taskIdFk</td>
+            <td>projectName</td>
+            <td>projectDescription </td>
+            </tr>
+            @foreach ($projects as $projects)
+                <tr>
+                <td>{{ $projects->projectID }}</td>
+                <td>{{ $projects->userIdFk }}</td>
+                <td>{{ $projects->taskIdFk }}</td>
+                <td>{{ $projects->projectName }}</td>
+                <td>{{ $projects->projectDescription }}</td>
+                </tr>
+            @endforeach
+        </table>
+
     <!-- Dragula JS and its initialization -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
     <script>
