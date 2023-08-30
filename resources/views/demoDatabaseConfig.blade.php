@@ -28,9 +28,9 @@ if(DB::connection()->getPdo())
 
 {
 
-echo “Successfully connected to the database => “
+echo "Successfully connected to the database => ";
 
-.DB::connection()->getDatabaseName();
+DB::connection()->getDatabaseName();
 
 }
 
