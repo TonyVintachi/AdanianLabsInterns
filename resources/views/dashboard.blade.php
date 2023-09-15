@@ -186,6 +186,14 @@
         </div>
     </div>
 
+    <?php
+            if(DB::connection()->getPdo())
+            {
+                echo "Successfully connected to the database => "
+                             .DB::connection()->getDatabaseName();
+            }
+        ?>
+
         <!-- displaying projects in database as list for testing has to be moved into the cards -->
 
         <table border = "1">
