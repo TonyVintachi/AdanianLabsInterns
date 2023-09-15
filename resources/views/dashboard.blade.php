@@ -196,7 +196,7 @@
 
         <!-- displaying projects in database as list for testing has to be moved into the cards -->
 
-        <table border = "1">
+        <table>
             <tr>
             <td>projectID</td>
             <td>userIdFk</td>
