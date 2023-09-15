@@ -186,11 +186,16 @@
         </div>
     </div>
 
-    <?php
-            if(DB::connection()->getPdo())
-            {
-                echo "Successfully connected to the database => "
-                             .DB::connection()->getDatabaseName();
+    <?php                    
+            try {
+                if(DB::connection()->getPdo())
+                {
+                    echo "Successfully connected to the database => "
+                                  .DB::connection()->getDatabaseName();
+                }
+            }
+            catch (Exception $e) {
+                echo "Unable to connect";
             }
         ?>
 
