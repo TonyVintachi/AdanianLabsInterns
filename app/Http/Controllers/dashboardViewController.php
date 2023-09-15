@@ -18,4 +18,7 @@ return view('dashboard',['projects'=>$projects]);
 //ignore this https://www.geeksforgeeks.org/different-ways-for-passing-data-to-view-in-laravel/
 //swithing machince fixing a bug 
 
+//https://www.geeksforgeeks.org/laravel-view-basics/
+//use this to validate user view and if it exists pull all the projects to the dashboard 
+
 }
